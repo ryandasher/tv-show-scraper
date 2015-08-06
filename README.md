@@ -23,3 +23,7 @@ Now run these commands to get a random episode from a TV show of your choice (th
     import scraper
     episode = scraper.return_random_episode("it's always sunny in philadelphia")
     episode
+
+## Why?
+
+Sometimes I have trouble deciding what episode from a TV series I want to watch, so I'm just going to make Python do it for me.
