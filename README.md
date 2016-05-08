@@ -9,11 +9,9 @@ After cloning the git repository onto your machine, make a virtual environment (
     $ mkvirtualenv scraper
     $ pip install -r requirements.txt
 
-## Early version
+## Using the Program
 
-This is a very early demo of what I want this simple application to accomplish. Right now you can just run the program on the command line, and get a random episode from a TV show of your choice. In the end I would like to be able to store episode data in a JSON database so I don't need to hit the website each time I want an episode, and build a front end that goes along with it.
-
-In order to run the program and get a random episode, get into your virtualenvironment, then hop into the Python shell:
+In order to run the program and get a show's episodes, get into your virtualenvironment, then hop into the Python shell:
 
     workon scraper
     python
@@ -21,9 +19,13 @@ In order to run the program and get a random episode, get into your virtualenvir
 Now run these commands to get a random episode from a TV show of your choice (the example below uses Always Sunny as an example):
 
     import scraper
-    episode = scraper.return_random_episode("it's always sunny in philadelphia")
-    episode
+    scraper.return_random_episode("it's always sunny in philadelphia")
+
+Or, if you want to store all episodes in a JSON document, run these commands:
+
+	import scraper
+	scraper.store_episodes("it's always sunny in philadelphia")
 
 ## Why?
 
-Sometimes I have trouble deciding what episode from a TV series I want to watch, so I'm just going to make Python do it for me.
+Sometimes I have trouble deciding what episode from a TV series I want to watch, so I want to create some programs that will decide for me.
